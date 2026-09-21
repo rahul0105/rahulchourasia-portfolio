@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://rahulchourasia.com/sitemap.xml",
+    sitemap: "https://rahulchourasia.in/sitemap.xml",
   };
 }
