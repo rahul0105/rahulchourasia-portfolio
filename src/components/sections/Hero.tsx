@@ -172,7 +172,7 @@ export default function Hero() {
             {/* Social Links */}
             <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
               <a
-                href="https://github.com/YOUR_USERNAME"
+                href="https://github.com/rahul0105"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
@@ -186,7 +186,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/YOUR_USERNAME"
+                href="https://www.linkedin.com/in/rahul--chourasia/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"

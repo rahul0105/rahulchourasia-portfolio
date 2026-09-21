@@ -13,7 +13,7 @@ import {
 
 export const SITE_CONFIG = {
   name: "Rahul Chourasia",
-  url: "https://rahulchourasia.com",
+  url: "https://rahulchourasia.in",
   title: "Website & Mobile Developer",
   description:
     "I build responsive, user-focused web and mobile applications using React, Next.js and React Native.",
@@ -155,9 +155,9 @@ export const services = [
 ] as const;
 
 export const contactInfo = {
-  email: "rahulchourasia.dev@gmail.com",
-  linkedin: "https://www.linkedin.com/in/YOUR_USERNAME",
-  github: "https://github.com/YOUR_USERNAME",
+  email: "contact@rahulchourasia.in",
+  linkedin: "https://www.linkedin.com/in/rahul--chourasia/",
+  github: "https://github.com/rahul0105",
 } as const;
 
 export const projectTypes = [

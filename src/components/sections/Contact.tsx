@@ -122,7 +122,7 @@ export default function Contact() {
               {/* Email */}
               <a
                 href={`mailto:${contactInfo.email}`}
-                className="group flex items-center gap-3 text-sm text-slate-700 transition-colors duration-200 hover:text-blue-600"
+                className="group flex items-center gap-3 text-md font-medium text-slate-700 transition-colors duration-200 hover:text-blue-600"
               >
                 <span
                   className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-white text-blue-600 shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5"
@@ -144,7 +144,7 @@ export default function Contact() {
                 href={contactInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-sm text-slate-700 transition-colors duration-200 hover:text-blue-600"
+                className="group flex items-center gap-3 text-md font-medium text-slate-700 transition-colors duration-200 hover:text-blue-600"
               >
                 <span
                   className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-white text-blue-600 shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5"
@@ -157,7 +157,7 @@ export default function Contact() {
                 </span>
 
                 <span>
-                  linkedin.com/in/YOUR_USERNAME
+                  linkedin.com/in/rahul--chourasia/
                 </span>
               </a>
 
@@ -166,7 +166,7 @@ export default function Contact() {
                 href={contactInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-sm text-slate-700 transition-colors duration-200 hover:text-blue-600"
+                className="group flex items-center gap-3 text-md font-medium text-slate-700 transition-colors duration-200 hover:text-blue-600"
               >
                 <span
                   className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-white text-slate-950 shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5"
@@ -179,7 +179,7 @@ export default function Contact() {
                 </span>
 
                 <span>
-                  github.com/YOUR_USERNAME
+                  github.com/rahul0105
                 </span>
               </a>
             </div>

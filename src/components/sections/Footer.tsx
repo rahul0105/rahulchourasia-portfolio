@@ -106,7 +106,7 @@ export default function Footer() {
               </a>
 
               <p className="mt-1 text-xs text-slate-500">
-                Frontend & Mobile Developer
+                Website & Mobile Developer
               </p>
             </div>
 
@@ -114,7 +114,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               {/* GitHub */}
               <a
-                href="#"
+                href="https://github.com/rahul0105/"
                 aria-label="GitHub"
                 className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-500 transition-all hover:border-blue-200 hover:text-blue-600"
               >
@@ -126,7 +126,7 @@ export default function Footer() {
 
               {/* LinkedIn */}
               <a
-                href="#"
+                href="https://www.linkedin.com/in/rahul--chourasia/"
                 aria-label="LinkedIn"
                 className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-500 transition-all hover:border-blue-200 hover:text-blue-600"
               >
