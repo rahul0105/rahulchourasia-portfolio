@@ -1,36 +1,279 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rahul Chourasia --- Portfolio
 
-## Getting Started
+A modern, responsive personal portfolio website for **Rahul Chourasia**,
+a Website & Mobile Developer.
 
-First, run the development server:
+The portfolio presents Rahul's technical skills, selected projects,
+services, background, and contact information through a clean,
+performance-focused single-page experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌐 Live Website
+
+**https://rahulchourasia.in**
+
+## ✨ Highlights
+
+-   Responsive design for desktop, tablet, and mobile
+-   Modern single-page portfolio experience
+-   Website & Mobile Developer positioning
+-   Featured projects showcase
+-   Technology and skills section
+-   Services section
+-   About section
+-   Contact form with email delivery
+-   Cloudflare Turnstile protection
+-   Server-side validation and rate limiting
+-   SEO metadata and canonical URL
+-   Open Graph and Twitter metadata
+-   JSON-LD Person structured data
+-   Dynamic `robots.txt`
+-   Dynamic `sitemap.xml`
+-   Security headers and Content Security Policy
+-   Optimized images using Next.js Image
+-   Accessible keyboard navigation and reduced-motion support
+-   Production deployment ready
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+-   Next.js
+-   React
+-   TypeScript
+-   Tailwind CSS
+-   JavaScript
+-   HTML5
+-   CSS3
+
+### UI & Icons
+
+-   Lucide React
+-   React Simple Icons
+-   Font Awesome
+
+### Security & Backend
+
+-   Next.js Route Handlers
+-   Cloudflare Turnstile
+-   Nodemailer
+-   SMTP
+-   Server-side input validation
+-   Rate limiting
+-   Content Security Policy
+-   Security HTTP headers
+
+### SEO & Performance
+
+-   Next.js Metadata API
+-   Open Graph metadata
+-   Twitter metadata
+-   JSON-LD structured data
+-   `robots.ts`
+-   `sitemap.ts`
+-   `next/font`
+-   Next.js Image optimization
+
+### Development & Deployment
+
+-   Git
+-   GitHub
+-   Vercel
+-   HTTPS
+-   Hostinger email
+
+## 📁 Project Structure
+
+``` text
+rahulchourasia-portfolio/
+├── public/
+│   ├── images/
+│   │   ├── projects/
+│   │   └── about/
+│   └── icons/
+│
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── contact/
+│   │   │       └── route.ts
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── robots.ts
+│   │   └── sitemap.ts
+│   │
+│   ├── components/
+│   │   ├── layout/
+│   │   ├── sections/
+│   │   ├── seo/
+│   │   └── ui/
+│   │
+│   ├── lib/
+│   │   ├── constants.ts
+│   │   └── utils.ts
+│   │
+│   └── types/
+│       └── index.ts
+│
+├── .env.local
+├── next.config.ts
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Clone the repository
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+``` bash
+git clone https://github.com/rahul0105/rahulchourasia-portfolio.git
+cd rahulchourasia-portfolio
+```
 
-## Learn More
+### 2. Install dependencies
 
-To learn more about Next.js, take a look at the following resources:
+``` bash
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Configure environment variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create a `.env.local` file in the project root.
 
-## Deploy on Vercel
+Example:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+``` env
+SMTP_HOST=smtp.hostinger.com
+SMTP_PORT=465
+SMTP_USER=contact@rahulchourasia.in
+SMTP_PASSWORD=your_hostinger_email_password
+CONTACT_EMAIL=contact@rahulchourasia.in
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_turnstile_site_key
+TURNSTILE_SECRET_KEY=your_turnstile_secret_key
+```
+
+**Never commit `.env.local` or expose secret keys in client-side code.**
+
+### 4. Start the development server
+
+``` bash
+npm run dev
+```
+
+Open:
+
+``` text
+http://localhost:3000
+```
+
+### 5. Create a production build
+
+``` bash
+npm run build
+```
+
+### 6. Start the production server locally
+
+``` bash
+npm start
+```
+
+## 🔐 Security
+
+Security was considered throughout the application rather than added
+only at deployment.
+
+The contact API includes protections such as:
+
+-   Request content-type validation
+-   Request body size limits
+-   Origin validation
+-   Rate limiting
+-   Honeypot protection
+-   Cloudflare Turnstile verification
+-   Server-side input validation
+-   Allowlisted project types
+-   Email validation
+-   HTML escaping
+-   Generic error responses
+-   Server-side secret handling
+
+The application also uses security-related HTTP headers including:
+
+-   `Content-Security-Policy`
+-   `Strict-Transport-Security`
+-   `X-Content-Type-Options`
+-   `X-Frame-Options`
+-   `Referrer-Policy`
+-   `Permissions-Policy`
+
+## 🔎 SEO
+
+The portfolio includes:
+
+-   Descriptive page metadata
+-   Canonical URL
+-   Open Graph metadata
+-   Twitter card metadata
+-   Robots directives
+-   Dynamic sitemap
+-   Person JSON-LD structured data
+-   Semantic heading hierarchy
+-   Descriptive image `alt` text
+
+## ♿ Accessibility
+
+The interface was reviewed for:
+
+-   Semantic HTML
+-   Heading hierarchy
+-   Keyboard navigation
+-   Visible focus states
+-   Image alternative text
+-   Form accessibility
+-   Reduced-motion preferences
+-   Responsive readability
+-   Color and visual contrast
+
+## 📱 Responsive Design
+
+The layout was tested across:
+
+-   Desktop --- 1440px
+-   Desktop --- 1280px
+-   Tablet --- 768px
+-   Mobile --- 375px
+-   Small mobile --- 320px
+
+The implementation is designed to prevent page-level horizontal overflow
+while preserving intentional horizontal project scrolling where
+required.
+
+## 📬 Contact
+
+For professional inquiries:
+
+**Email:** contact@rahulchourasia.in
+
+**GitHub:** https://github.com/rahul0105
+
+**LinkedIn:** https://www.linkedin.com/in/rahul--chourasia
+
+## 👨‍💻 About
+
+Rahul Chourasia is a Website & Mobile Developer focused on building
+responsive, user-focused applications using technologies such as React,
+Next.js, and React Native.
+
+## 📄 License
+
+This repository contains a personal portfolio website and its source
+code.
+
+The portfolio content, personal branding, photographs, and other
+original assets belong to Rahul Chourasia unless otherwise stated.
+
+If you would like to reuse any part of this project, please contact
+Rahul first.
