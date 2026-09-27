@@ -92,8 +92,8 @@ export const featuredProjects = [
       "A full-stack e-commerce platform with product management, cart, checkout and secure authentication.",
     image: "/images/projects/ecommerce.webp",
     technologies: ["React.js", "MongoDB", "Tailwind CSS"],
-    liveUrl: "#",
-    codeUrl: "#",
+    liveUrl: "https://pureshop-ecommerce.onrender.com",
+    codeUrl: "https://github.com/rahul0105/PureShop---Ecommerce",
   },
   {
     title: "Project Management Dashboard",
@@ -101,8 +101,8 @@ export const featuredProjects = [
       "A business dashboard to manage projects and tasks with authentication and analytics.",
     image: "/images/projects/project-management.webp",
     technologies: ["Next.js", "TypeScript", "Chart.js"],
-    liveUrl: "#",
-    codeUrl: "#",
+    liveUrl: null,
+    codeUrl: "https://github.com/rahul0105/client-flow",
   },
   {
     title: "Expense Tracker App",
@@ -110,8 +110,8 @@ export const featuredProjects = [
       "A cross-platform mobile app to track expenses, manage invoices and view insights.",
     image: "/images/projects/expense-tracker.webp",
     technologies: ["React Native", "TypeScript", "Expo"],
-    liveUrl: "#",
-    codeUrl: "#",
+    liveUrl: null,
+    codeUrl: null,
   },
 ] as const;
 
