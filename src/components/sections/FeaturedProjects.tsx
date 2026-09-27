@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import HorizontalScroller from "@/components/ui/HorizontalScroller";
 import { featuredProjects } from "@/lib/constants";
@@ -15,11 +15,27 @@ function ProjectActions({
 }) {
   const [notice, setNotice] = useState<string | null>(null);
 
+  const actionClass =
+  "m-0 inline-flex shrink-0 cursor-pointer appearance-none items-center gap-1 whitespace-nowrap border-0 bg-transparent p-0 text-xs !font-semibold !text-slate-950 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 sm:text-sm!";
+
+const codeActionClass =
+  "m-0 inline-flex shrink-0 cursor-pointer appearance-none items-center gap-1.5 whitespace-nowrap border-0 bg-transparent p-0 text-xs !font-semibold !text-slate-950 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 sm:text-sm!";
+
+  useEffect(() => {
+    if (!notice) return;
+
+    const timeout = window.setTimeout(() => {
+      setNotice(null);
+    }, 3000);
+
+    return () => window.clearTimeout(timeout);
+  }, [notice]);
+
   const showInProgressMessage = (type: "Live Demo" | "View Code") => {
     setNotice(
       type === "Live Demo"
-        ? "Live demo is coming soon — this project is in progress."
-        : "Source code is coming soon — this project is in progress.",
+        ? "Coming soon — this project is currently in progress."
+        : "Coming soon — source code for this project is currently in progress.",
     );
   };
 
@@ -32,7 +48,7 @@ function ProjectActions({
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs font-semibold text-slate-950 transition-colors hover:text-blue-600 sm:text-sm"
+            className={actionClass}
           >
             Live Demo
             <ArrowRight
@@ -45,7 +61,7 @@ function ProjectActions({
           <button
             type="button"
             onClick={() => showInProgressMessage("Live Demo")}
-            className="inline-flex items-center gap-1 text-xs font-semibold text-slate-950 transition-colors hover:text-blue-600 sm:text-sm"
+            className={actionClass}
           >
             Live Demo
             <ArrowRight
@@ -61,7 +77,7 @@ function ProjectActions({
             href={project.codeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-950 transition-colors hover:text-blue-600 sm:text-sm"
+            className={codeActionClass}
           >
             View Code
             <SiGithub
@@ -74,7 +90,7 @@ function ProjectActions({
           <button
             type="button"
             onClick={() => showInProgressMessage("View Code")}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-950 transition-colors hover:text-blue-600 sm:text-sm"
+            className={codeActionClass}
           >
             View Code
             <SiGithub
@@ -87,12 +103,27 @@ function ProjectActions({
       </div>
 
       {notice && (
-        <p
+        <div
           role="status"
-          className="mt-2 text-xs leading-5 text-slate-500"
+          aria-live="polite"
+          className="fixed bottom-5 right-5 z-50 flex w-[min(360px,calc(100vw-40px))] items-start gap-3 rounded-lg border border-blue-100 bg-white px-4 py-3 text-sm text-slate-700 shadow-lg"
         >
-          {notice}
-        </p>
+          <div className="flex-1">
+            <p className="font-semibold text-slate-950">Coming Soon</p>
+            <p className="mt-0.5 text-xs leading-5 text-slate-600">
+              {notice}
+            </p>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setNotice(null)}
+            aria-label="Close notification"
+            className="shrink-0 rounded-md p-1 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500/30"
+          >
+            <X size={16} aria-hidden="true" />
+          </button>
+        </div>
       )}
     </>
   );
